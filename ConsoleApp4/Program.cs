@@ -107,9 +107,32 @@ namespace ConsoleApp4
                 Console.WriteLine(num1 + "prime number.");
             else
                 Console.WriteLine(num1 + "not prime number.");
+            #endregion
 
+            #region Q6
+            void MinMaxArray(int[] arr, ref int min, ref int max)
+            {
+                min = arr[0];
+                max = arr[0];
 
+                foreach (int num in arr)
+                {
+                    if (num < min){ 
+                        min = num; 
+                    }
 
+                    if (num > max) { 
+                        max = num; 
+                    } 
+                }
+            }
+
+            int[] numbers = { 10, 13, 1, 4, 9 };
+            int min = 0;
+            int max = 0;
+            MinMaxArray(numbers, ref min, ref max);
+            Console.WriteLine("Min = " + min);
+            Console.WriteLine("Max = " + max);
             #endregion
         }
     }
